@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer__section">
           <h3>Contact Us</h3>
           <p>Email: greenworld@gardening-at-home.com</p>
-          <p>Phone: 063805 25382</p>
+          <p>Phone: 8610807985</p>
         </div>
         <div className="footer__section">
           <h3>Follow Us</h3>

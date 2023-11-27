@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SignInPage from './SignInPage';
 import SignupPage from './SignUpPage';
+import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [isSignInOpen, setIsSignInOpen] = useState(false);
   const [isSignupOpen, setIsSignupOpen] = useState(false);
@@ -20,17 +21,17 @@ const Navbar = () => {
   const closeSignupPage = () => {
     setIsSignInOpen(false);
   };
-
+  const Navigate = useNavigate();
   return (
     <nav className="navbar">
       <div className="navbar__logo">
         <img src="https://t3.ftcdn.net/jpg/01/66/84/96/360_F_166849625_tPjczxCHpG1egnai8eUNRg20SSvMjzBT.jpg" alt="Garden Logo"/>
       </div>
       <div className="navbar__links">
-        <a href="#home">Home</a>
-        <a href="#projects">About</a>
+        <a onClick={()=>Navigate('/')}>Home</a>
+        <a onClick={()=>Navigate('about')}>About</a>
         <a href="#profile">Profile</a>
-        <a href="#contact">Contact</a>
+        <a onClick={()=>Navigate('contact')}>Contact</a>
       </div>
       <div className="navbar__sign-in">
         <button onClick={handleSignInClick}>Sign In</button>
